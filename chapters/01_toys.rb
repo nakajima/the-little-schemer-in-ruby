@@ -1,7 +1,7 @@
 require '../lib/primitives'
 
 def atom?(x)
-  !x.nil? and !x.is_a?(Array) # This is cheating a bit
+  !x.nil? and !x.respond_to?(:to_sym)
 end
 
 if ($0 == __FILE__)
