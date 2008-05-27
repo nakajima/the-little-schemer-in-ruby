@@ -1,7 +1,7 @@
 require File.join(File.dirname(__FILE__),'../lib/primitives')
 
 def atom?(x)
-  !x.nil? and !x.respond_to?(:to_sym)
+  !x.nil? and x.respond_to?(:to_sym)
 end
 
 if ($0 == __FILE__)
