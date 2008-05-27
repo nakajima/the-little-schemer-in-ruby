@@ -1,10 +1,4 @@
-require File.join(File.dirname(__FILE__),'../lib/primitives')
-
-def atom?(x)
-  !x.nil? and x.respond_to?(:to_sym)
-end
-
-if ($0 == __FILE__)
+require File.join(File.dirname(__FILE__),'/../lib/01')
 
 puts (atom? :pat) # => true
 puts (atom? :abc) # => true
@@ -26,4 +20,3 @@ puts (eq? :pat, :pat) # => true
 l = [:beans, :beans, :we, :need, :jelly, :beans]
 puts (eq? (car l), (car (cdr l))) # => true
 
-end
