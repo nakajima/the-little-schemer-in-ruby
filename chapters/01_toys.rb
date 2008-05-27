@@ -1,4 +1,4 @@
-require '../lib/primitives'
+require File.join(File.dirname(__FILE__),'../lib/primitives')
 
 def atom?(x)
   !x.nil? and !x.respond_to?(:to_sym)

@@ -1,4 +1,4 @@
-require '01_toys'
+require File.join(File.dirname(__FILE__),'01_toys')
 
 def lat? l
   case
