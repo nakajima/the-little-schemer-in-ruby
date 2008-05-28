@@ -5,3 +5,8 @@ def rember(a, lat)
   return (cdr lat) if (eq? a, (car lat)) 
   (cons (car lat), (rember a, (cdr lat)))
 end
+
+def firsts(lat)
+  return [] if (null? lat)
+  (cons (car (car lat)), (firsts (cdr lat)))
+end
