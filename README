@@ -1,3 +1,7 @@
 Examples from the book "The Little Schemer" ported to Ruby.
 
 Get the book: http://www.amazon.com/Little-Schemer-Daniel-P-Friedman/dp/0262560992
+
+The scheme examples work with the PLT scheme interpreter (http://plt-scheme.org/).
+I'm using that one because I really don't know any better. If there's a better one,
+please let me know.
