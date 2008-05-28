@@ -3,26 +3,27 @@ def eq?(l1, l2)
   l1 == l2
 end
 
-def car list
-  return nil if (atom? list)
-  list.first
+def car _list
+  return nil if (atom? _list)
+  _list.first
 end
 
-def cdr list
-  return nil if (atom? list)
-  list.last
+def cdr _list
+  return nil if (atom? _list)
+  _list.last
 end
 
-def null? list
-  return nil if (atom? list)
-  list.nil? or list.empty?
+def null? _list
+  return nil if (atom? _list)
+  _list.nil? or _list.empty?
 end
 
-def cons(a, list)
-  [a,list]
+def cons(a, _list)
+  [a, _list]
 end
 
-def list(array)
-  array = Array(array) if atom?(array)
+def list(*array)
+	array ||= []
+	array.flatten!
   array.reverse.inject(nil) {|memo,j| memo = [j,memo]}
 end
