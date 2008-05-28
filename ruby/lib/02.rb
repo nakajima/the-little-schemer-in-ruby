@@ -11,5 +11,5 @@ end
 
 def member?(a, lat)
   return [] if (null? lat)
-  (eq? a, (car lat)) || (member? a, (cdr lat))
+  return (eq? a, (car lat)) || (member? a, (cdr lat))
 end
