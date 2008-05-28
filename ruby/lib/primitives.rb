@@ -10,8 +10,7 @@ end
 
 def cdr list
   return nil if (atom? list)
-  list.delete_at(0)
-  list
+  list[1..-1]
 end
 
 def null? list
@@ -20,5 +19,5 @@ def null? list
 end
 
 def cons(a, list)
-  list.unshift(a)
+  list.dup.unshift(a)
 end
