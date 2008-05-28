@@ -18,3 +18,7 @@ def null? list
   return nil if (atom? list)
   list.empty?
 end
+
+def cons(a, list)
+  list.unshift(a)
+end
