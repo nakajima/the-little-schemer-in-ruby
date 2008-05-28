@@ -6,14 +6,15 @@ puts (atom? []) # => false
 
 puts (car list(1,2,3)) # => 1
 puts (car list(:hamburger, :hotdogs, :pickles)) # => :hamburger
-puts (car :pat) # => nil
+
+puts (car :pat) rescue TypeMustBeList; (puts "car requires list") # => TypeMustBeList
 
 puts (cdr list(1,2,3)) # => 2,3
 puts (cdr list(:hamburger, :hotdogs, :pickles)) # => :hotdogs, :pickles
-puts (cdr :pat) # => nil
+puts (cdr :pat) rescue TypeMustBeList; (puts "cdr requires list") # => TypeMustBeList
 
 l = list(:a, list(:b, list(:c)), :d)
-puts (cdr (car l)) # => nil
+puts (cdr (car l)) rescue TypeMustBeList; (puts "cdr requires list") # => TypeMustBeList
 
 puts (eq? :pat, :pat) # => true
 

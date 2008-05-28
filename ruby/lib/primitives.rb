@@ -1,20 +1,23 @@
+class TypeMustBeList < StandardError; end
+class TypeMustBeAtom < StandardError; end
+
 def eq?(l1, l2)
   return nil if !(atom? l1) || !(atom? l2)
   l1 == l2
 end
 
 def car _list
-  return nil if (atom? _list)
+  raise TypeMustBeList.new if (atom? _list)
   _list.first
 end
 
 def cdr _list
-  return nil if (atom? _list)
+  raise TypeMustBeList.new if (atom? _list)
   _list.last
 end
 
 def null? _list
-  return nil if (atom? _list)
+  raise TypeMustBeList.new if (atom? _list)
   _list.nil? or _list.empty?
 end
 
