@@ -9,3 +9,10 @@
       ((eq? (car lat) a) (cdr lat))
         (else (cons (car lat)
           (rember a (cdr lat)))))))
+
+(define firsts
+  (lambda (lat)
+    (cond
+      ((null? lat) (quote ()))
+      (else (cons (car (car lat))
+              (firsts (cdr lat)))))))
