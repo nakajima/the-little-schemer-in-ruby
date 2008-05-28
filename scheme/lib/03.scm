@@ -1,4 +1,6 @@
-(load (build-path (current-directory) 'up "lib" "02.scm"))
+; From Chapter 3: Cons the Magnificent...
+
+(load (build-path (current-directory) 'up "lib" "02.scm")); Build on last section
 
 ; Takes two arguments: a (atom) and lat (list). Removes the first
 ; occurance of a from lat and returns a new list.
@@ -10,6 +12,7 @@
         (else (cons (car lat)
           (rember a (cdr lat)))))))
 
+; Takes a list of lists and returns a new list consisting of the first item of each.
 (define firsts
   (lambda (lat)
     (cond
