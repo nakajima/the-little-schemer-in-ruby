@@ -5,19 +5,24 @@ end
 
 def car list
   return nil if (atom? list)
-  list[0]
+  list.first
 end
 
 def cdr list
   return nil if (atom? list)
-  list[1..-1]
+  list.last
 end
 
 def null? list
   return nil if (atom? list)
-  list.empty?
+  list.nil? or list.empty?
 end
 
 def cons(a, list)
-  list.dup.unshift(a)
+  [a,list]
+end
+
+def list(array)
+  array = Array(array) if atom?(array)
+  array.reverse.inject(nil) {|memo,j| memo = [j,memo]}
 end

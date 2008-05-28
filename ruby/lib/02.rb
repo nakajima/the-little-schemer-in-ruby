@@ -10,6 +10,6 @@ def lat? l
 end
 
 def member?(a, lat)
-  return [] if (null? lat)
+  return false if (null? lat)
   return (eq? a, (car lat)) || (member? a, (cdr lat))
 end
